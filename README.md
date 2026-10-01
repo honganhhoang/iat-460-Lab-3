@@ -1,43 +1,68 @@
-# IAT 460 — Week 3 Lab: Generative Grammars, L-Systems and Markov models
+# A Generative Spider Web System
 
-Welcome to the Week 3 lab for **IAT 460 - Computational Creativity**! This repository contains 3 lab notebooks.
+## Description
 
----
+Created an L-System-based generative art system created in Python
+using ColabTurtle.
 
-## Lab Overview
+The project explores how simple rule-based systems can generate
+different spider web structures.
 
-In this lab, you will get hands-on experience with:
+The system contains three main patterns:
 
-- Using **context-free grammars** for generating natural language sentences.
-- Using **L-Systems** for fractal generation
-- Generating text using **Markov Chains**, and further exploration with higher-order **Markov Models**
+1. Orb Web
+2. Corner Web
+3. Damaged Web
 
-> **Note**: You are not expected to understand all the code. Focus on exploration, experimentation, and discussion.
+The project combines L-System rewriting with procedural geometry to
+create the support and connecting structures of spider webs.
 
----
+## L-System Rules
 
-## Running **Python** notebooks
+### Orb Web
 
-### Option 1
+X → F+X
 
-If you are familiar with github, you can clone this repo and run the notebook in your IDE or tool of choice.
+### Corner Web
 
-```bash
-git clone https://github.com/IAT-ComputationalCreativity-Spring2026/Lab-3.git
-cd Lab-3
-```
+X → F+FX
 
-Create a python virtual environmment (Python 3.12 recommended).
+### Damaged Web
 
-```bash
-python3 -m venv .venv
-# or
-conda create -n iat460lab3 python=3.12
-```
+X → F[+X][-X]
 
-### Option 2
+## How to Run
 
-The provided notebook is accessible in Google Colab and requires no setup:
-- [grammars](https://colab.research.google.com/github/IAT-ComputationalCreativity-Spring2026/Lab-3/blob/main/generative_grammars.ipynb)
-- [l-systems](https://colab.research.google.com/github/IAT-ComputationalCreativity-Spring2026/Lab-3/blob/main/l-systems.ipynb)
-- [markov models](https://colab.research.google.com/github/IAT-ComputationalCreativity-Spring2026/Lab-3/blob/main/markov_models.ipynb)
+The project was created using Google Colab.
+
+1. Open `spider_web_generator.ipynb` in Google Colab.
+2. Run the installation/import cell.
+3. Run the L-System setup cell.
+4. Run any of the three pattern cells.
+5. Change the adjustable parameters at the beginning of a pattern
+   cell to generate variations.
+6. Run the cell again to view the new output.
+
+## Adjustable Parameters
+
+Depending on the pattern, adjustable parameters include:
+
+- iterations
+- spokes
+- rings
+- size
+- web color
+- line width
+- random seed
+- angle variation
+- thread variation
+
+## Requirements
+
+- Python
+- Google Colab
+- ColabTurtle
+
+## Author
+
+Hong Anh Hoang
